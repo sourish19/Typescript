@@ -1,16 +1,10 @@
-// Types - number, string, any - can be any datatype
-// Try to avoid using any because we are using Typescript for typechecking purpose
-// Typescript only catches compile time error
-// Type Inferencing
-// TS is giving a lot of information to the compiler
-
 const x: number = 1; // I have implicitly given a Type
 console.log(x);
 
 function greeting(name: string) {
   return `Hello ${name}`;
 }
-console.log(greeting("sourish"));
+console.log(greeting("Levi"));
 
 function isAdult(age: number) {
   if (age > 18) return true;
@@ -41,7 +35,7 @@ delayedCall(() => {
 // Function that does return a string & takes arguments if we want to have multiple types to return then we have use | like this
 function delayedCall2(cb: (val: string) => string, delay: number) {
   setTimeout(() => {
-    cb("Hello Hi there");
+    cb("Hi there");
   }, delay);
 }
 delayedCall2((val: string) => {
@@ -50,9 +44,11 @@ delayedCall2((val: string) => {
 }, 1000);
 
 let y: any = 1;
-y = "sourish";
+y = "Eren";
 y = [1, 2, 3];
 
 
 // Tsconfig.ts is the configuration file for ts which is used to configure the ts compiler
 // There are default config we can overide them based on our requirements 
+
+// inferred types - when we dont explicitly define the type like {let a = 2} - Inferred as: number
