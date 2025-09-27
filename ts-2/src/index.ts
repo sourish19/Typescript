@@ -1,5 +1,4 @@
-// Dont push the js file codes which gets compiled by ts compiler
-// We can push the ts file codes
+
 // we cannot use custom types as runtime variables
 
 //This is the way to define type of an object
@@ -13,14 +12,30 @@ const getUserDetails = (user: {
   return `Hi ` + user.name;
 };
 
+// Without using interfaces
 const user: {
   name: string;
   age: number;
   isVerified: boolean;
 } = {
-  name: "Sourish",
+  name: "Levi",
   age: 21,
   isVerified: true,
 };
-
 console.log(getUserDetails(user));
+
+//  INTERFACES & TYPES
+interface User{
+  name: string,
+  age: number,
+  anime?: string // It means optional string | undefined 
+}
+
+// To asign a type to this obj we use interfaces
+const User:User = {
+  name : 'Muzan',
+  age : 1000,
+  // anime: 'Demon Slayer',
+}
+
+console.log(User)
