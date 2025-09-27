@@ -47,7 +47,10 @@ let y: any = 1;
 y = "Eren";
 y = [1, 2, 3];
 
-
+function printStringNumberBool(val : string | number | boolean): void{
+  console.log(val)
+}
+printStringNumberBool(1) 
 // Tsconfig.ts is the configuration file for ts which is used to configure the ts compiler
 // There are default config we can overide them based on our requirements 
 

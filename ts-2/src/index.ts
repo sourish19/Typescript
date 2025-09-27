@@ -1,4 +1,3 @@
-
 // we cannot use custom types as runtime variables
 
 //This is the way to define type of an object
@@ -25,17 +24,29 @@ const user: {
 console.log(getUserDetails(user));
 
 //  INTERFACES & TYPES
-interface User{
-  name: string,
-  age: number,
-  anime?: string // It means optional string | undefined 
+interface User {
+  name: string;
+  age: number;
+  anime?: string; // It means optional string | undefined
 }
 
 // To asign a type to this obj we use interfaces
-const User:User = {
-  name : 'Muzan',
-  age : 1000,
+const User: User = {
+  name: "Muzan",
+  age: 1000,
   // anime: 'Demon Slayer',
-}
+};
+console.log(User);
 
-console.log(User)
+const fun = async (number: number): Promise<number> => {
+  const val = await Promise.resolve(number);
+  return val;
+};
+
+console.log("Promise function - ", fun(26));
+
+//  Contextual Typing
+// TypeScript infers name is a string because names is an array of strings
+//the context (names array) gives TypeScript enough information.
+const names = ["Eren", "Levi", "Denji"];
+names.forEach((name) => console.log(name.toUpperCase()));
