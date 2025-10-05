@@ -35,6 +35,7 @@ console.log(
 // ------------------------------
 
 // ---------- ENUMS ------------
+//restrict user choices
 // It returns 0,1,2,3....
 enum Direction{
     Up = 1,
@@ -46,6 +47,14 @@ function doSomething(keyPress: Direction){
     console.log(keyPress);
 }
 doSomething(Direction.Down)
+
+enum seatChoice {
+  AISLE = 10, // default start with zero or assigned the value
+  MIDDLE = 22,
+  WINDOW = 33,
+  FOURTH = 44,
+}
+const mySeat = seatChoice.WINDOW;
 // ------------------------------
 
 // ------- Most Common UseCase -------

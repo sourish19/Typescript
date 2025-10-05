@@ -1,4 +1,4 @@
-// Arrays
+// More on Arrays
 
 const superHeros: string[] = [];
 superHeros.push("spiderman");
