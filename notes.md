@@ -7,6 +7,7 @@ Install TS - These commands initialize a TS project
 - npm init -y
 - npx tsc --init
 - tsc -b -> Compile ts to js 
+- After the compilation run node dist/index.js - like normally used to do 
 #
 
 - Generates a new index.js file 
