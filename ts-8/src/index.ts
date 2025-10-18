@@ -48,6 +48,27 @@ type ApiResponse2<Data extends object> = {
   data: Data;
 };
 
+// T is a superset of string - it must be a string
+// Taking string as parameter and it is constrained to be a string
+type Generic<T extends string> = {
+    name: T
+}
+// This means it can either be a {age:number} or a string
+type Custom = {
+    age: number
+} | string
+
+const a: Custom = "John"
+const b: Custom = {age: 23}
+
+// Nested Generics 
+type Generic2 <T> = {
+    prop: T extends string ? string : T extends number ? number : undefined
+}
+
+const c: Generic2<string> = {prop: "John"}
+const d: Generic2<null> = {prop: undefined}
+//  ##############################################################################################
 
 // Record<K, T> --> Built in Utility Type that constructs an Object
 // K - Type of keys(usually string)

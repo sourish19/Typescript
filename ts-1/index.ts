@@ -84,3 +84,9 @@ hero = getHeros()
 // But be careful — using any removes all the safety TypeScript gives you. It’s like turning off TypeScript for that variable
 //  but don't use any in any of your code
 export {}
+
+
+// handling error use never
+function handleError(errorMsg: string): never {
+  throw new Error(errorMsg);
+}
